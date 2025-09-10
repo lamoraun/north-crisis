@@ -55,7 +55,7 @@ const CrisisPage: React.FC = () => {
                 {/* Декоративные изображения по бокам */}
                 <Box
                     component="img"
-                    src="/images/left-decor.png" // Путь к левому изображению
+                    src="/images/left-decor.png"
                     alt=""
                     sx={{
                         position: 'absolute',
@@ -70,7 +70,7 @@ const CrisisPage: React.FC = () => {
                 />
                 <Box
                     component="img"
-                    src="/images/right-decor.png" // Путь к правому изображению
+                    src="/images/right-decor.png"
                     alt=""
                     sx={{
                         position: 'absolute',
@@ -176,30 +176,31 @@ const CrisisPage: React.FC = () => {
                         СИЛЫ ИМПЕРИИ
                     </Typography>
 
-                    <Grid
-                        container
-                        spacing={isMobile ? 2 : 3}
-                        sx={{
-                            justifyContent: 'center',
-                            alignItems: 'stretch'
-                        }}
-                    >
+                    <Box sx={{
+                        alignItems: 'center',
+                        display: 'grid',
+                        gridTemplateColumns: {
+                            xs: '1fr',
+                            sm: 'repeat(2, 1fr)',
+                            md: 'repeat(3, 1fr)'
+                        },
+                        gap: isMobile ? 2 : 3,
+                        justifyContent: 'center'
+                    }}>
                         {states.map((country) => (
-                            <Grid
-                                item
-                                xs={12}
-                                sm={6}
-                                md={4}
+                            <Box
                                 key={country.id}
                                 sx={{
                                     display: 'flex',
-                                    minHeight: isMobile ? 280 : 320
+                                    minHeight: isMobile ? 280 : 320,
+                                    height: '100%',
+                                    justifyContent: 'center'
                                 }}
                             >
                                 <CountryCard country={country} />
-                            </Grid>
+                            </Box>
                         ))}
-                    </Grid>
+                    </Box>
                 </Container>
             </Box>
 
