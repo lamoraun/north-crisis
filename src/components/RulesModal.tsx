@@ -37,7 +37,7 @@ const RulesModal: React.FC<RulesModalProps> = ({ open, onClose }) => {
             }}>
                 <Typography
                     variant="h5"
-                    component="h2"
+                    component="div"
                     sx={{
                         fontWeight: 'bold',
                         color: 'primary.main'
@@ -61,16 +61,14 @@ const RulesModal: React.FC<RulesModalProps> = ({ open, onClose }) => {
 
             <DialogContent dividers sx={{ bgcolor: 'background.default', p: isMobile ? 2 : 3 }}>
                 <Box sx={{ py: 1 }}>
-                    {/* Введение */}
                     <Typography variant="body1" paragraph sx={{ mb: 3, lineHeight: 1.6 }}>
                         Война в Эдильдоре перешла в новую фазу. Темнокожие Маубу взяли эльфийскую столицу
                         и стремительно вторгаются в другие части страны. Над Хоатрией нависает осознание угрозы:
                         если не предотвратить беду, враг накопит силы и ударит уже по империи. Только от действий
-                        курфюрстов зависит, падёт ли Эдильдор под натиском угрозы Маубу, или же объединённая
-                        имперская воля сокрушит захватчиков.
+                        курфюрстов зависит, падёт Эдильдор под натиском угрозы Маубу, или же
+                        имперское единство сокрушит захватчиков.
                     </Typography>
 
-                    {/* Раздел 1: Курфюршеские характеристики */}
                     <Typography
                         variant="h6"
                         sx={{
@@ -89,7 +87,6 @@ const RulesModal: React.FC<RulesModalProps> = ({ open, onClose }) => {
                         У каждого курфюршества есть три основные характеристики, которые развиваются через действия в игре.
                     </Typography>
 
-                    {/* Военная мощь */}
                     <Box sx={{ mb: 3 }}>
                         <Typography variant="subtitle1" sx={{ fontWeight: 'bold', color: 'error.main', mb: 1 }}>
                             Военная мощь (ВМ)
@@ -105,7 +102,6 @@ const RulesModal: React.FC<RulesModalProps> = ({ open, onClose }) => {
                         </Typography>
                     </Box>
 
-                    {/* Политический вес */}
                     <Box sx={{ mb: 3 }}>
                         <Typography variant="subtitle1" sx={{ fontWeight: 'bold', color: 'info.main', mb: 1 }}>
                             Политический вес (ПВ)
@@ -126,7 +122,6 @@ const RulesModal: React.FC<RulesModalProps> = ({ open, onClose }) => {
                         </Typography>
                     </Box>
 
-                    {/* Внутренняя стабильность */}
                     <Box sx={{ mb: 4 }}>
                         <Typography variant="subtitle1" sx={{ fontWeight: 'bold', color: 'success.main', mb: 1 }}>
                             Внутренняя стабильность (ВС)
@@ -155,7 +150,6 @@ const RulesModal: React.FC<RulesModalProps> = ({ open, onClose }) => {
                         </Box>
                     </Box>
 
-                    {/* Раздел 2: Общие характеристики */}
                     <Typography
                         variant="h6"
                         sx={{
@@ -174,7 +168,6 @@ const RulesModal: React.FC<RulesModalProps> = ({ open, onClose }) => {
                         Над всеми государствами Севера нависли две общие шкалы.
                     </Typography>
 
-                    {/* Угроза Маубу */}
                     <Box sx={{ mb: 3 }}>
                         <Typography variant="subtitle1" sx={{ fontWeight: 'bold', color: 'warning.main', mb: 1 }}>
                             Угроза Маубу (УМ)
@@ -193,7 +186,6 @@ const RulesModal: React.FC<RulesModalProps> = ({ open, onClose }) => {
                         </Typography>
                     </Box>
 
-                    {/* Имперское Единство */}
                     <Box sx={{ mb: 4 }}>
                         <Typography variant="subtitle1" sx={{ fontWeight: 'bold', color: 'info.main', mb: 1 }}>
                             Имперское Единство (ИЕ)
@@ -202,18 +194,13 @@ const RulesModal: React.FC<RulesModalProps> = ({ open, onClose }) => {
                             <strong>Что это:</strong> Шкала от 0 до 20. Отражает готовность империи к организации общего похода.
                         </Typography>
                         <Typography variant="body2" paragraph sx={{ mb: 1 }}>
-                            <strong>Как увеличить:</strong>
+                            <strong>Как увеличить:</strong> Политический вес (ПВ) от сделок между курфюрстами заполняет шкалу ИЕ.
                         </Typography>
-                        <Box component="ul" sx={{ pl: 3, mb: 1 }}>
-                            <li><Typography variant="body2">Конвертация ПВ: Политический вес (ПВ) от сделок между курфюрстами заполняет шкалу ИЕ.</Typography></li>
-                            <li><Typography variant="body2">Помощь эльфов: успешные сделки с Эдильдором могут принести + 2 или + 3 к ИЕ.</Typography></li>
-                        </Box>
                         <Typography variant="body2">
                             <strong>Цель:</strong> Чтобы объявить общеимперский поход против Маубу, необходимо, чтобы ИЕ ≥ УМ.
                         </Typography>
                     </Box>
 
-                    {/* Раздел 3: Великий Поход */}
                     <Typography
                         variant="h6"
                         sx={{
@@ -238,7 +225,6 @@ const RulesModal: React.FC<RulesModalProps> = ({ open, onClose }) => {
                         Курфюрст, пожертвовавший наибольшее количество ВМ, будет иметь преимущество на выборах императора.
                     </Typography>
 
-                    {/* Раздел 4: Эльфийское влияние */}
                     <Typography
                         variant="h6"
                         sx={{
@@ -260,7 +246,6 @@ const RulesModal: React.FC<RulesModalProps> = ({ open, onClose }) => {
                         Принятие сделки даст различные бонусы к характеристикам страны. Сорвав сделку, курфюрст навлечёт на себя гнев древнего народа (– 2 к ВС, – 3 к ПВ).
                     </Typography>
 
-                    {/* Раздел 5: Выборы императора */}
                     <Typography
                         variant="h6"
                         sx={{

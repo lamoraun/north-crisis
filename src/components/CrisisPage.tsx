@@ -38,7 +38,6 @@ const CrisisPage: React.FC = () => {
             bgcolor: 'background.default',
             background: 'linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 50%, #2a2a2a 100%)'
         }}>
-            {/* Первый экран - Кризис */}
             <Box
                 sx={{
                     minHeight: '100vh',
@@ -51,7 +50,6 @@ const CrisisPage: React.FC = () => {
                     px: isMobile ? 2 : 0
                 }}
             >
-                {/* Декоративные изображения по бокам */}
                 <Box
                     component="img"
                     src="/images/left-decor.png"
@@ -146,12 +144,11 @@ const CrisisPage: React.FC = () => {
                         }}
                     >
                         Тёмные времена наступили для севера Ламорана. Судьба Хоатрии висит на волоске,
-                        и только единство перед лицом общей угрозы может спасти её земли.
+                        и только единство перед лицом общей угрозы может спасти её от катастрофы.
                     </Typography>
                 </Container>
             </Box>
 
-            {/* Второй экран - Страны */}
             <Box sx={{
                 minHeight: '100vh',
                 display: 'flex',
@@ -203,7 +200,6 @@ const CrisisPage: React.FC = () => {
                 </Container>
             </Box>
 
-            {/* Кнопка помощи */}
             <Fab
                 color="primary"
                 aria-label="help"

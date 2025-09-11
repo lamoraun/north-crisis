@@ -21,9 +21,7 @@ const CountryCard: React.FC<CountryCardProps> = ({ country }) => {
         const names: { [key: string]: string } = {
             brabermein: 'Брабермейн',
             barvaria: 'Барвария',
-            eurabia: 'Еврабия',
-            edildor: 'Эдильдор',
-            mauubu: 'Маубу'
+            eurabia: 'Еврабия'
         };
         return names[id] || id;
     };
@@ -32,24 +30,21 @@ const CountryCard: React.FC<CountryCardProps> = ({ country }) => {
         const flags: { [key: string]: string } = {
             brabermein: '/flags/brabermein-flag.png',
             barvaria: '/flags/barvaria-flag.png',
-            eurabia: '/flags/eurabia-flag.png',
-            edildor: '/flags/edildor-flag.png',
-            mauubu: '/flags/mauubu-flag.png'
+            eurabia: '/flags/eurabia-flag.png'
         };
-        return flags[id] || '/flags/default-flag.png';
+        return flags[id];
     };
 
     return (
         <Card
             sx={{
-                height: '100%',
-                minHeight: isMobile ? 280 : 320,
                 transition: 'all 0.3s ease',
                 background: 'linear-gradient(145deg, #1a1a1a 0%, #2a2a2a 100%)',
                 '&:hover': {
                     transform: 'translateY(-2px)',
                     boxShadow: '0 6px 20px rgba(0,0,0,0.3)'
-                }
+                },
+                padding: isMobile ? 2 : 3
             }}
         >
             <CardContent sx={{

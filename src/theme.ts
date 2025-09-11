@@ -4,12 +4,12 @@ export const theme = createTheme({
     palette: {
         mode: 'dark',
         primary: {
-            main: '#00acc1', // бирюзовый
+            main: '#00acc1',
             light: '#4fb3bf',
             dark: '#00838f',
         },
         secondary: {
-            main: '#8d6e63', // коричневый
+            main: '#8d6e63',
             light: '#be9c91',
             dark: '#5d4037',
         },
@@ -24,13 +24,15 @@ export const theme = createTheme({
         divider: '#333333',
     },
     typography: {
-        fontFamily: '"Cinzel", "Roboto", "Helvetica", "Arial", sans-serif',
+        fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif',
         h1: {
+            fontFamily: '"Metamorphous", "Roboto", "Helvetica", "Arial", sans-serif',
             fontWeight: 700,
             fontSize: '3.5rem',
             letterSpacing: '0.1em',
         },
         h2: {
+            fontFamily: '"Metamorphous", "Roboto", "Helvetica", "Arial", sans-serif',
             fontWeight: 600,
             fontSize: '2.5rem',
             letterSpacing: '0.05em',

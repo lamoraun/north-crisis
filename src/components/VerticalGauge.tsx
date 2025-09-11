@@ -29,7 +29,8 @@ const VerticalGauge: React.FC<VerticalGaugeProps> = ({
             display: 'flex',
             flexDirection: 'column',
             alignItems: 'center',
-            mx: isMobile ? 1 : 2
+            mx: isMobile ? 1 : 2,
+            minWidth: 110
         }}>
             <Typography
                 variant="h6"
